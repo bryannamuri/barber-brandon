@@ -171,7 +171,6 @@
       </a>
       <nav class="nav" aria-label="Main navigation">
         <a href="#about">About</a>
-        <a href="#areas">Areas</a>
         <a href="#services">Services</a>
         <a href="https://www.instagram.com/madrigalsignature" class="nav__cta" target="_blank" rel="noopener noreferrer me">Follow</a>
       </nav>
@@ -267,11 +266,33 @@
       </div>
     </section>
 
-    <section class="gallery" aria-label="Madrigal Signature work gallery">
-      <div class="gallery__track">
-        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80&auto=format&fit=crop" alt="Madrigal Signature providing a precision fade haircut in Yucca Valley" loading="lazy" width="800" height="533">
-        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80&auto=format&fit=crop" alt="Professional barber clippers and tools for house call grooming in Southern California" loading="lazy" width="800" height="533">
-        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80&auto=format&fit=crop" alt="Fresh men's haircut and grooming by mobile barber Madrigal Signature" loading="lazy" width="800" height="533">
+    <section class="gallery" aria-roledescription="carousel" aria-label="Madrigal Signature work gallery">
+      <div class="gallery__viewport" tabindex="0">
+        <div class="gallery__track">
+          <figure class="gallery__slide"><img src="assets/gallery/work-01.jpg" alt="Precision fade and beard grooming by Madrigal Signature in Yucca Valley" loading="lazy" width="360" height="640"></figure>
+          <figure class="gallery__slide"><img src="assets/gallery/work-02.jpg" alt="Clean taper fade haircut by Madrigal Signature" loading="lazy" width="310" height="552"></figure>
+          <figure class="gallery__slide"><img src="assets/gallery/work-03.jpg" alt="Sharp taper fade back view by Madrigal Signature" loading="lazy" width="310" height="552"></figure>
+          <figure class="gallery__slide"><img src="assets/gallery/work-04.jpg" alt="Taper fade side profile at Madrigal Signature barbershop" loading="lazy" width="310" height="552"></figure>
+          <figure class="gallery__slide"><img src="assets/gallery/work-05.jpg" alt="Crisp tapered neckline and fade by Madrigal Signature" loading="lazy" width="310" height="552"></figure>
+          <figure class="gallery__slide"><img src="assets/gallery/work-06.jpg" alt="Textured taper fade with clean lines by Madrigal Signature" loading="lazy" width="310" height="552"></figure>
+          <figure class="gallery__slide"><img src="assets/gallery/work-07.jpg" alt="Kids fade haircut by Madrigal Signature in Yucca Valley" loading="lazy" width="360" height="640"></figure>
+          <figure class="gallery__slide"><img src="assets/gallery/work-08.jpg" alt="Fresh kids cut and fade by Madrigal Signature" loading="lazy" width="360" height="640"></figure>
+          <figure class="gallery__slide"><img src="assets/gallery/work-09.jpg" alt="Pompadour fade and beard trim by Madrigal Signature" loading="lazy" width="310" height="552"></figure>
+          <figure class="gallery__slide"><img src="assets/gallery/work-10.jpg" alt="Taper fade and beard grooming at Madrigal Signature barbershop" loading="lazy" width="360" height="640"></figure>
+          <figure class="gallery__slide"><img src="assets/gallery/work-11.jpg" alt="Burst fade with curly top by Madrigal Signature" loading="lazy" width="360" height="640"></figure>
+          <figure class="gallery__slide"><img src="assets/gallery/work-12.jpg" alt="Fade and beard line-up by Madrigal Signature" loading="lazy" width="360" height="640"></figure>
+          <figure class="gallery__slide"><img src="assets/gallery/work-13.jpg" alt="Modern burst fade side profile by Madrigal Signature" loading="lazy" width="360" height="640"></figure>
+          <figure class="gallery__slide"><img src="assets/gallery/work-14.jpg" alt="Textured burst fade and fringe cut by Madrigal Signature" loading="lazy" width="360" height="640"></figure>
+        </div>
+      </div>
+      <div class="gallery__controls">
+        <button type="button" class="gallery__btn gallery__btn--prev" aria-label="Previous photo">
+          <span aria-hidden="true">‹</span>
+        </button>
+        <div class="gallery__dots" role="tablist" aria-label="Gallery slides"></div>
+        <button type="button" class="gallery__btn gallery__btn--next" aria-label="Next photo">
+          <span aria-hidden="true">›</span>
+        </button>
       </div>
     </section>
 
