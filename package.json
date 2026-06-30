@@ -1,5 +1,6 @@
 {
   "name": "barber-brandon",
+  "description": "Barber Brandon — barbershop website in Yucca Valley, CA",
   "private": true,
   "version": "1.0.0",
   "scripts": {

@@ -1,0 +1,6 @@
+{
+  "name": "Barber Brandon",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
+}
