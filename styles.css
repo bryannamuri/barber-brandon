@@ -17,9 +17,7 @@
   --border: rgba(201, 169, 98, 0.25);
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
-  --header-h: 132px;
-  --header-logo-h: 118px;
-  --header-logo-max-w: 360px;
+  --header-h: 96px;
 }
 
 html {
@@ -81,7 +79,7 @@ a:hover {
 }
 
 .header.is-sticky {
-  height: 92px;
+  height: 76px;
   background: rgba(12, 12, 12, 0.98);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -119,9 +117,9 @@ a:hover {
 
 .logo img,
 .logo__img {
-  height: var(--header-logo-h);
+  height: 88px;
   width: auto;
-  max-width: min(var(--header-logo-max-w), 55vw);
+  max-width: min(220px, 42vw);
   object-fit: contain;
   display: block;
   transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -129,8 +127,8 @@ a:hover {
 
 .header.is-sticky .logo img,
 .header.is-sticky .logo__img {
-  height: 84px;
-  max-width: 260px;
+  height: 72px;
+  max-width: 180px;
   filter: none;
 }
 
@@ -1024,22 +1022,6 @@ a:hover {
 
 /* Mobile nav */
 @media (max-width: 768px) {
-  :root {
-    --header-h: 112px;
-    --header-logo-h: 96px;
-    --header-logo-max-w: 280px;
-  }
-
-  .header.is-sticky {
-    height: 84px;
-  }
-
-  .header.is-sticky .logo img,
-  .header.is-sticky .logo__img {
-    height: 72px;
-    max-width: 220px;
-  }
-
   .menu-toggle {
     display: flex;
   }
@@ -1059,7 +1041,7 @@ a:hover {
   }
 
   .header.is-sticky .nav {
-    inset: 84px 0 auto;
+    inset: 76px 0 auto;
   }
 
   .nav.is-open {
