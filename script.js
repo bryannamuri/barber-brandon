@@ -130,6 +130,7 @@ const galleryTrack = document.querySelector('.gallery__track');
 const galleryPrev = document.querySelector('.gallery__btn--prev');
 const galleryNext = document.querySelector('.gallery__btn--next');
 const galleryDots = document.querySelector('.gallery__dots');
+const galleryCounterCurrent = document.querySelector('.gallery__counter-current');
 
 if (galleryViewport && galleryTrack) {
   const slides = Array.from(galleryTrack.querySelectorAll('.gallery__slide'));
@@ -168,6 +169,10 @@ if (galleryViewport && galleryTrack) {
       dot.setAttribute('aria-selected', String(isActive));
       dot.tabIndex = isActive ? 0 : -1;
     });
+
+    if (galleryCounterCurrent) {
+      galleryCounterCurrent.textContent = String(activeIndex + 1).padStart(2, '0');
+    }
   }
 
   if (galleryDots) {

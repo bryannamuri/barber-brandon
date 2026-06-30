@@ -33,6 +33,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -168,9 +171,9 @@
         <img src="assets/logo.png" alt="Madrigal Signature — Brandon Madrigal, barber" class="logo__img" width="160" height="160">
       </a>
       <nav class="nav" aria-label="Main navigation">
+        <a href="#gallery">Work</a>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="https://www.instagram.com/madrigalsignature" class="nav__cta" target="_blank" rel="noopener noreferrer me">Follow</a>
+        <a href="https://www.instagram.com/madrigalsignature" class="nav__cta" target="_blank" rel="noopener noreferrer me">@madrigalsignature</a>
       </nav>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
         <span></span>
@@ -181,39 +184,96 @@
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-heading">
+    <section class="hero hero--compact" aria-labelledby="hero-heading">
       <div class="hero__overlay"></div>
       <div class="hero__content">
-        <p class="hero__eyebrow">Morongo Basin · Southern California · House Calls</p>
+        <p class="hero__eyebrow">Yucca Valley · House Calls · SoCal</p>
         <h1 id="hero-heading" class="hero__logo">
           <img src="assets/logo.png" alt="Madrigal Signature — Brandon Madrigal, barber in Yucca Valley" class="hero__logo-img" width="360" height="360">
         </h1>
         <p class="hero__barber">Brandon Madrigal</p>
-        <p class="hero__tagline">Your barber in Yucca Valley — serving Joshua Tree, the desert &amp; all of SoCal.</p>
+        <p class="hero__tagline">Desert fades. Sharp lines. I pull up anywhere in SoCal.</p>
         <div class="hero__actions">
-          <a href="https://www.instagram.com/madrigalsignature" class="btn btn--primary" target="_blank" rel="noopener noreferrer me">Follow on Instagram</a>
-          <a href="https://booksy.com/en-us/instant-experiences/widget/1385080?instant_experiences_enabled=true&amp;ig_ix=true&amp;staffer_id=1415484" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">Book an Appointment</a>
+          <a href="#gallery" class="btn btn--primary">See the Work</a>
+          <a href="https://booksy.com/en-us/instant-experiences/widget/1385080?instant_experiences_enabled=true&amp;ig_ix=true&amp;staffer_id=1415484" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">Book a Cut</a>
         </div>
+        <a href="#gallery" class="hero__scroll reveal" aria-label="Scroll to gallery">
+          <span>Scroll</span>
+          <span class="hero__scroll-line" aria-hidden="true"></span>
+        </a>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Fades</span><span class="marquee__dot">·</span><span>Beards</span><span class="marquee__dot">·</span><span>House Calls</span><span class="marquee__dot">·</span><span>Joshua Tree</span><span class="marquee__dot">·</span><span>Yucca Valley</span><span class="marquee__dot">·</span><span>Design Work</span><span class="marquee__dot">·</span><span>SoCal Mobile</span><span class="marquee__dot">·</span>
+        <span>Fades</span><span class="marquee__dot">·</span><span>Beards</span><span class="marquee__dot">·</span><span>House Calls</span><span class="marquee__dot">·</span><span>Joshua Tree</span><span class="marquee__dot">·</span><span>Yucca Valley</span><span class="marquee__dot">·</span><span>Design Work</span><span class="marquee__dot">·</span><span>SoCal Mobile</span><span class="marquee__dot">·</span>
+      </div>
+    </div>
+
+    <section class="gallery gallery--featured" id="gallery" aria-roledescription="carousel" aria-label="Brandon Madrigal work gallery">
+      <div class="gallery__header container reveal-group">
+        <div class="gallery__header-copy">
+          <p class="section-eyebrow reveal">The Feed</p>
+          <h2 class="gallery__title reveal">Fresh Cuts<br><em>by Brandon</em></h2>
+          <p class="gallery__sub reveal">Tap through the portfolio — then catch the latest on Instagram.</p>
+        </div>
+        <a href="https://www.instagram.com/madrigalsignature" class="gallery__ig-link reveal" target="_blank" rel="noopener noreferrer me">
+          <svg class="gallery__ig-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+          @madrigalsignature
+        </a>
+      </div>
+      <div class="gallery__viewport" tabindex="0">
+        <div class="gallery__track">
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-15.jpg" alt="Curly burst fade side profile by Brandon Madrigal" loading="eager" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Burst Fade</span><span class="gallery__loc">High Desert</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-16.jpg" alt="Fade with hair design lines by Brandon Madrigal" loading="eager" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Hair Design</span><span class="gallery__loc">Yucca Valley</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-01.jpg" alt="Precision fade and beard grooming by Brandon Madrigal in Yucca Valley" loading="eager" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Fade + Beard</span><span class="gallery__loc">Shop Cut</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-05.jpg" alt="Crisp tapered neckline and fade by Brandon Madrigal" loading="lazy" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Taper Fade</span><span class="gallery__loc">Clean Lines</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-10.jpg" alt="Taper fade and beard grooming at Brandon Madrigal's barbershop" loading="lazy" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Taper + Beard</span><span class="gallery__loc">Yucca Valley</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-04.jpg" alt="Taper fade side profile at Brandon Madrigal's barbershop" loading="lazy" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Side Profile</span><span class="gallery__loc">Sharp Fade</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-08.jpg" alt="Fresh kids cut and fade by Brandon Madrigal" loading="lazy" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Kids Cut</span><span class="gallery__loc">Fresh Fade</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-11.jpg" alt="Burst fade with curly top by Brandon Madrigal" loading="lazy" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Burst Fade</span><span class="gallery__loc">Curly Top</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-07.jpg" alt="Kids fade haircut by Brandon Madrigal in Yucca Valley" loading="lazy" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Kids Fade</span><span class="gallery__loc">Morongo Basin</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-12.jpg" alt="Fade and beard line-up by Brandon Madrigal" loading="lazy" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Line-Up</span><span class="gallery__loc">Beard Work</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-14.jpg" alt="Textured burst fade and fringe cut by Brandon Madrigal" loading="lazy" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Textured Fringe</span><span class="gallery__loc">Burst Fade</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-13.jpg" alt="Modern burst fade side profile by Brandon Madrigal" loading="lazy" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Burst Fade</span><span class="gallery__loc">Modern Cut</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-06.jpg" alt="Textured taper fade with clean lines by Brandon Madrigal" loading="lazy" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Textured Taper</span><span class="gallery__loc">Clean Blend</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-02.jpg" alt="Clean taper fade haircut by Brandon Madrigal" loading="lazy" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Taper Fade</span><span class="gallery__loc">Classic</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-03.jpg" alt="Sharp taper fade back view by Brandon Madrigal" loading="lazy" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Back View</span><span class="gallery__loc">Sharp Taper</span></figcaption></div></figure>
+          <figure class="gallery__slide"><div class="gallery__slide-inner"><img src="assets/gallery/work-09.jpg" alt="Pompadour fade and beard trim by Brandon Madrigal" loading="lazy" width="1080" height="1350"><figcaption class="gallery__caption"><span class="gallery__tag">Pompadour</span><span class="gallery__loc">Fade + Beard</span></figcaption></div></figure>
+        </div>
+      </div>
+      <div class="gallery__controls">
+        <button type="button" class="gallery__btn gallery__btn--prev" aria-label="Previous photo">
+          <span aria-hidden="true">‹</span>
+        </button>
+        <span class="gallery__counter" aria-live="polite"><span class="gallery__counter-current">01</span> / <span class="gallery__counter-total">16</span></span>
+        <div class="gallery__dots" role="tablist" aria-label="Gallery slides"></div>
+        <button type="button" class="gallery__btn gallery__btn--next" aria-label="Next photo">
+          <span aria-hidden="true">›</span>
+        </button>
       </div>
     </section>
 
     <section class="about" id="about" aria-labelledby="about-heading">
       <div class="container about__inner">
         <div class="about__copy reveal-group">
-          <p class="section-eyebrow reveal">The Brand</p>
+          <p class="section-eyebrow reveal">Behind the Chair</p>
           <p class="about__name reveal">Brandon Madrigal</p>
-          <h2 id="about-heading" class="reveal">Your Barber — A Name You Remember</h2>
-          <p class="reveal">I'm <strong>Brandon Madrigal</strong>, and Madrigal Signature isn't just a chair in Yucca Valley. It's my brand — built on precision, consistency, and a look that speaks before you do. Whether you're rolling through the Morongo Basin, posted up in Joshua Tree, or need a barber who pulls up to <strong>your</strong> spot — I deliver.</p>
-          <p class="reveal">This is grooming with intention. Shop cuts with Brandon. House calls. No shortcuts.</p>
+          <h2 id="about-heading" class="reveal">It's Brandon.</h2>
+          <p class="reveal">Yucca Valley barber. I do clean fades, sharp lines, and I'll pull up to your spot anywhere in SoCal. Shop chair or house call — same quality either way.</p>
+          <p class="reveal">No corporate fluff. Just good cuts and a look you're gonna want to post.</p>
         </div>
         <div class="about__stats reveal-group" aria-label="Brand highlights">
           <div class="stat reveal reveal--right">
             <span class="stat__num">In-Home</span>
-            <span class="stat__label">House call barber available</span>
+            <span class="stat__label">I come to you</span>
           </div>
           <div class="stat reveal reveal--right">
             <span class="stat__num">Desert</span>
-            <span class="stat__label">Morongo Basin home base</span>
+            <span class="stat__label">Home base</span>
           </div>
         </div>
       </div>
@@ -223,14 +283,14 @@
       <div class="container house-call__inner">
         <div class="house-call__content reveal-group">
           <p class="section-eyebrow reveal">House Calls</p>
-          <h2 id="house-call-heading" class="reveal">In-Home Barber Service Across Southern California</h2>
-          <p class="reveal">Can't make it to the shop? Brandon comes to you. Private in-home barber house calls for clients who want the same quality cut — at their home, Airbnb, hotel, set, or event.</p>
+          <h2 id="house-call-heading" class="reveal">I'll Come to You</h2>
+          <p class="reveal">Can't make it to the shop? Same fade, your couch. Home, Airbnb, hotel, set — I pull up across SoCal.</p>
           <ul class="house-call__list reveal">
             <li>Morongo Basin &amp; High Desert — Yucca Valley, Joshua Tree, Twentynine Palms</li>
             <li>Coachella Valley — Palm Springs, Indio, La Quinta, Cathedral City</li>
             <li>Greater SoCal — Los Angeles, Orange County, Riverside, San Diego</li>
           </ul>
-          <p class="house-call__cta-text reveal">Text or call to set up a mobile appointment.</p>
+          <p class="house-call__cta-text reveal">DM on Instagram or call to set it up.</p>
           <div class="house-call__actions reveal">
             <a href="tel:+17609702250" class="btn btn--primary">760-970-2250</a>
           </div>
@@ -240,58 +300,25 @@
 
     <section class="services" id="services" aria-labelledby="services-heading">
       <div class="container">
-        <p class="section-eyebrow section-eyebrow--center reveal">Services</p>
-        <h2 id="services-heading" class="reveal">Cuts, Fades &amp; Grooming</h2>
+        <p class="section-eyebrow section-eyebrow--center reveal">What I Do</p>
+        <h2 id="services-heading" class="reveal">Cuts &amp; Grooming</h2>
         <ul class="services__grid reveal-group">
           <li class="service-card reveal reveal--scale">
-            <span class="service-card__icon" aria-hidden="true">✂</span>
+            <span class="service-card__num" aria-hidden="true">01</span>
             <h3>Haircuts &amp; Fades</h3>
-            <p>Skin fades, tapers, scissor work, and shape-ups — shop or in-home.</p>
+            <p>Skin fades, tapers, scissor work, shape-ups — shop or at your place.</p>
           </li>
           <li class="service-card reveal reveal--scale">
-            <span class="service-card__icon" aria-hidden="true">🪒</span>
+            <span class="service-card__num" aria-hidden="true">02</span>
             <h3>Beard &amp; Line-Up</h3>
-            <p>Beard sculpting, edge work, and clean lines that frame your face.</p>
+            <p>Beard sculpting, edge work, clean lines that frame your face.</p>
           </li>
           <li class="service-card reveal reveal--scale">
-            <span class="service-card__icon" aria-hidden="true">🏠</span>
+            <span class="service-card__num" aria-hidden="true">03</span>
             <h3>House Calls</h3>
-            <p>Mobile barber service at your location across Southern California.</p>
+            <p>Mobile barber — I come to you anywhere in Southern California.</p>
           </li>
         </ul>
-      </div>
-    </section>
-
-    <section class="gallery" aria-roledescription="carousel" aria-label="Brandon Madrigal work gallery">
-      <p class="gallery__intro section-eyebrow section-eyebrow--center reveal">Brandon's Work</p>
-      <div class="gallery__viewport" tabindex="0">
-        <div class="gallery__track">
-          <figure class="gallery__slide"><img src="assets/gallery/work-15.jpg" alt="Curly burst fade side profile by Brandon Madrigal" loading="eager" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-16.jpg" alt="Fade with hair design lines by Brandon Madrigal" loading="eager" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-01.jpg" alt="Precision fade and beard grooming by Brandon Madrigal in Yucca Valley" loading="eager" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-05.jpg" alt="Crisp tapered neckline and fade by Brandon Madrigal" loading="lazy" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-10.jpg" alt="Taper fade and beard grooming at Brandon Madrigal's barbershop" loading="lazy" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-04.jpg" alt="Taper fade side profile at Brandon Madrigal's barbershop" loading="lazy" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-08.jpg" alt="Fresh kids cut and fade by Brandon Madrigal" loading="lazy" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-11.jpg" alt="Burst fade with curly top by Brandon Madrigal" loading="lazy" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-07.jpg" alt="Kids fade haircut by Brandon Madrigal in Yucca Valley" loading="lazy" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-12.jpg" alt="Fade and beard line-up by Brandon Madrigal" loading="lazy" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-14.jpg" alt="Textured burst fade and fringe cut by Brandon Madrigal" loading="lazy" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-13.jpg" alt="Modern burst fade side profile by Brandon Madrigal" loading="lazy" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-06.jpg" alt="Textured taper fade with clean lines by Brandon Madrigal" loading="lazy" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-02.jpg" alt="Clean taper fade haircut by Brandon Madrigal" loading="lazy" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-03.jpg" alt="Sharp taper fade back view by Brandon Madrigal" loading="lazy" width="1080" height="1350"></figure>
-          <figure class="gallery__slide"><img src="assets/gallery/work-09.jpg" alt="Pompadour fade and beard trim by Brandon Madrigal" loading="lazy" width="1080" height="1350"></figure>
-        </div>
-      </div>
-      <div class="gallery__controls">
-        <button type="button" class="gallery__btn gallery__btn--prev" aria-label="Previous photo">
-          <span aria-hidden="true">‹</span>
-        </button>
-        <div class="gallery__dots" role="tablist" aria-label="Gallery slides"></div>
-        <button type="button" class="gallery__btn gallery__btn--next" aria-label="Next photo">
-          <span aria-hidden="true">›</span>
-        </button>
       </div>
     </section>
 
@@ -341,11 +368,11 @@
 
     <section class="brand-cta" id="connect" aria-labelledby="connect-heading">
       <div class="container brand-cta__inner reveal-group">
-        <h2 id="connect-heading" class="reveal">Follow Brandon</h2>
-        <p class="reveal">Brandon Madrigal is building something bigger than a haircut. Follow the journey — new cuts, desert life, SoCal house calls, and the craft behind the chair.</p>
+        <h2 id="connect-heading" class="reveal">Get on the Feed</h2>
+        <p class="reveal">New cuts drop on Instagram first. Follow along — then book when you're ready.</p>
         <div class="brand-cta__actions reveal">
           <a href="https://www.instagram.com/madrigalsignature" class="btn btn--primary btn--large" target="_blank" rel="noopener noreferrer me">Follow @madrigalsignature</a>
-          <a href="https://booksy.com/en-us/instant-experiences/widget/1385080?instant_experiences_enabled=true&amp;ig_ix=true&amp;staffer_id=1415484" class="btn btn--ghost btn--large" target="_blank" rel="noopener noreferrer">Book When Ready</a>
+          <a href="https://booksy.com/en-us/instant-experiences/widget/1385080?instant_experiences_enabled=true&amp;ig_ix=true&amp;staffer_id=1415484" class="btn btn--ghost btn--large" target="_blank" rel="noopener noreferrer">Book a Cut</a>
         </div>
       </div>
     </section>
