@@ -852,10 +852,27 @@ a:hover {
   margin-top: 1.25rem;
 }
 
-.social a {
+.social__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  color: var(--gold-light);
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.social__link:hover {
+  color: var(--gold);
+  opacity: 1;
+}
+
+.social__icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  opacity: 0.9;
 }
 
 .hours {
