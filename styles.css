@@ -17,7 +17,9 @@
   --border: rgba(201, 169, 98, 0.25);
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
-  --header-h: 96px;
+  --header-h: 132px;
+  --header-logo-h: 118px;
+  --header-logo-max-w: 360px;
 }
 
 html {
@@ -79,7 +81,7 @@ a:hover {
 }
 
 .header.is-sticky {
-  height: 76px;
+  height: 92px;
   background: rgba(12, 12, 12, 0.98);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -117,9 +119,9 @@ a:hover {
 
 .logo img,
 .logo__img {
-  height: 88px;
+  height: var(--header-logo-h);
   width: auto;
-  max-width: min(220px, 42vw);
+  max-width: min(var(--header-logo-max-w), 55vw);
   object-fit: contain;
   display: block;
   transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -127,8 +129,8 @@ a:hover {
 
 .header.is-sticky .logo img,
 .header.is-sticky .logo__img {
-  height: 72px;
-  max-width: 180px;
+  height: 84px;
+  max-width: 260px;
   filter: none;
 }
 
@@ -257,15 +259,16 @@ a:hover {
 }
 
 .hero__logo {
-  margin: 0 auto 1.25rem;
+  margin: 0 auto 1rem;
   line-height: 0;
 }
 
 .hero__logo-img {
   display: block;
   margin: 0 auto;
-  height: clamp(200px, 32vw, 320px);
+  height: clamp(280px, 42vw, 400px);
   width: auto;
+  max-width: min(95vw, 440px);
   object-fit: contain;
   filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.45));
 }
@@ -1021,6 +1024,22 @@ a:hover {
 
 /* Mobile nav */
 @media (max-width: 768px) {
+  :root {
+    --header-h: 112px;
+    --header-logo-h: 96px;
+    --header-logo-max-w: 280px;
+  }
+
+  .header.is-sticky {
+    height: 84px;
+  }
+
+  .header.is-sticky .logo img,
+  .header.is-sticky .logo__img {
+    height: 72px;
+    max-width: 220px;
+  }
+
   .menu-toggle {
     display: flex;
   }
@@ -1040,7 +1059,7 @@ a:hover {
   }
 
   .header.is-sticky .nav {
-    inset: 76px 0 auto;
+    inset: 84px 0 auto;
   }
 
   .nav.is-open {
@@ -1067,6 +1086,11 @@ a:hover {
   .brand-cta__actions {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .hero__logo-img {
+    height: clamp(320px, 78vw, 400px);
+    max-width: 94vw;
   }
 
   .hero__actions .btn,
