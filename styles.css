@@ -58,9 +58,51 @@ a:hover {
   inset: 0 0 auto;
   z-index: 100;
   height: var(--header-h);
-  background: rgba(12, 12, 12, 0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
+  transition:
+    background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header--transparent:not(.is-sticky) {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.header--transparent:not(.is-sticky) .nav a,
+.header--transparent:not(.is-sticky) .logo img {
+  filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.6));
+}
+
+.header.is-sticky {
+  height: 60px;
+  background: rgba(12, 12, 12, 0.98);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom-color: var(--border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+  animation: headerSlideIn 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.header.is-sticky .nav a,
+.header.is-sticky .logo img {
+  filter: none;
+}
+
+@keyframes headerSlideIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .header__inner {
@@ -70,11 +112,42 @@ a:hover {
   height: 100%;
   width: min(1100px, 92vw);
   margin-inline: auto;
+  transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .logo img {
   height: 40px;
   width: auto;
+  transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header.is-sticky .logo img {
+  height: 32px;
+}
+
+/* Transparent over hero (Menspire-style) */
+.header--transparent:not(.is-sticky) .nav a {
+  color: var(--cream);
+}
+
+.header--transparent:not(.is-sticky) .nav__cta {
+  border-color: rgba(245, 240, 232, 0.6);
+  color: var(--cream) !important;
+}
+
+.header--transparent:not(.is-sticky) .nav__cta:hover {
+  background: var(--cream);
+  color: var(--bg-dark) !important;
+  border-color: var(--cream);
+}
+
+.header--transparent:not(.is-sticky) .menu-toggle span {
+  background: var(--cream);
+}
+
+.header.is-sticky .nav a,
+.header:not(.header--transparent) .nav a {
+  color: var(--cream);
 }
 
 .nav {
@@ -789,6 +862,10 @@ a:hover {
     opacity: 0;
     pointer-events: none;
     transition: transform 0.35s, opacity 0.35s;
+  }
+
+  .header.is-sticky .nav {
+    inset: 60px 0 auto;
   }
 
   .nav.is-open {
