@@ -17,7 +17,7 @@
   --border: rgba(201, 169, 98, 0.25);
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
-  --header-h: 72px;
+  --header-h: 96px;
 }
 
 html {
@@ -74,13 +74,12 @@ a:hover {
   -webkit-backdrop-filter: none;
 }
 
-.header--transparent:not(.is-sticky) .nav a,
-.header--transparent:not(.is-sticky) .logo img {
+.header--transparent:not(.is-sticky) .nav a {
   filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.6));
 }
 
 .header.is-sticky {
-  height: 60px;
+  height: 76px;
   background: rgba(12, 12, 12, 0.98);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -90,7 +89,8 @@ a:hover {
 }
 
 .header.is-sticky .nav a,
-.header.is-sticky .logo img {
+.header.is-sticky .logo img,
+.header.is-sticky .logo__img {
   filter: none;
 }
 
@@ -115,14 +115,26 @@ a:hover {
   transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.logo img {
-  height: 40px;
+.logo img,
+.logo__img {
+  height: 88px;
   width: auto;
+  max-width: min(220px, 42vw);
+  object-fit: contain;
+  display: block;
   transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.header.is-sticky .logo img {
-  height: 32px;
+.header.is-sticky .logo img,
+.header.is-sticky .logo__img {
+  height: 72px;
+  max-width: 180px;
+  filter: none;
+}
+
+.header--transparent:not(.is-sticky) .logo img,
+.header--transparent:not(.is-sticky) .logo__img {
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45));
 }
 
 /* Transparent over hero (Menspire-style) */
@@ -233,7 +245,7 @@ a:hover {
 .hero__content {
   position: relative;
   z-index: 1;
-  max-width: 640px;
+  max-width: 720px;
 }
 
 .hero__eyebrow {
@@ -241,10 +253,24 @@ a:hover {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
-.hero h1 {
+.hero__logo {
+  margin: 0 auto 1.25rem;
+  line-height: 0;
+}
+
+.hero__logo-img {
+  display: block;
+  margin: 0 auto;
+  height: clamp(200px, 32vw, 320px);
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.45));
+}
+
+.hero h1:not(.hero__logo) {
   font-family: var(--font-display);
   font-size: clamp(3rem, 10vw, 5.5rem);
   font-weight: 700;
@@ -475,8 +501,7 @@ a:hover {
   background: var(--bg-dark);
 }
 
-.areas h2,
-.faq h2 {
+.areas h2 {
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 2.75rem);
   text-align: center;
@@ -542,61 +567,123 @@ a:hover {
   background: rgba(255, 255, 255, 0.03);
 }
 
-/* FAQ */
-.faq {
-  padding: 5rem 0;
-  background: var(--bg-elevated);
-  border-top: 1px solid var(--border);
-}
-
-.faq__list {
-  max-width: 720px;
-  margin: 2.5rem auto 0;
-}
-
-.faq__item {
-  border-bottom: 1px solid var(--border);
-  padding: 1.25rem 0;
-}
-
-.faq__item summary {
+/* Footer blocks */
+.footer__heading {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.footer-areas {
+  width: 100%;
+  max-width: 520px;
+  padding: 0 0.5rem;
+  text-align: left;
+}
+
+.footer-areas__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer-areas__group h3 {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: var(--gold-light);
+  opacity: 0.85;
+  margin-bottom: 0.3rem;
+}
+
+.footer-areas__group p {
+  font-size: 0.6rem;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+/* FAQ (footer) */
+.footer-faq {
+  width: 100%;
+  max-width: 520px;
+  margin: 0.75rem 0 0.25rem;
+  padding: 0 0.5rem;
+  text-align: left;
+}
+
+.footer-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer-faq__item {
+  border-bottom: 1px solid rgba(201, 169, 98, 0.12);
+  padding: 0.65rem 0;
+}
+
+.footer-faq__item summary {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
   cursor: pointer;
   list-style: none;
-  color: var(--cream);
-  padding-right: 2rem;
+  padding-right: 1.25rem;
   position: relative;
 }
 
-.faq__item summary::-webkit-details-marker {
+.footer-faq__item summary::-webkit-details-marker {
   display: none;
 }
 
-.faq__item summary::after {
+.footer-faq__item summary::after {
   content: "+";
   position: absolute;
   right: 0;
   top: 0;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-style: normal;
   color: var(--gold);
-  font-size: 1.25rem;
+  opacity: 0.5;
 }
 
-.faq__item[open] summary::after {
+.footer-faq__item[open] summary::after {
   content: "−";
 }
 
-.faq__item p {
-  margin-top: 1rem;
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.7;
+.footer-faq__item summary:hover {
+  color: var(--gold-light);
 }
 
-.faq__item a {
+.footer-faq__item p {
+  margin-top: 0.55rem;
+  font-size: 0.62rem;
+  line-height: 1.65;
+  letter-spacing: 0.015em;
+  color: var(--text-muted);
+  opacity: 0.85;
+}
+
+.footer-faq__item a {
   color: var(--gold-light);
+  opacity: 0.9;
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 2px;
 }
 
 /* Brand CTA */
@@ -626,14 +713,6 @@ a:hover {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-}
-
-.footer__areas {
-  font-size: 0.75rem !important;
-  color: var(--text-muted) !important;
-  max-width: 640px;
-  line-height: 1.6;
-  opacity: 0.85;
 }
 
 /* Services */
@@ -820,7 +899,7 @@ a:hover {
 
 /* Footer */
 .footer {
-  padding: 2.5rem 0;
+  padding: 3rem 0 2.5rem;
   border-top: 1px solid var(--border);
   background: var(--bg-dark);
 }
@@ -829,17 +908,19 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
   text-align: center;
 }
 
 .footer__logo {
-  opacity: 0.7;
-  height: 36px;
+  opacity: 1;
+  height: 200px;
   width: auto;
+  object-fit: contain;
 }
 
-.footer p {
+.footer p,
+.footer__copy {
   font-size: 0.8rem;
   color: var(--text-muted);
 }
@@ -865,7 +946,7 @@ a:hover {
   }
 
   .header.is-sticky .nav {
-    inset: 60px 0 auto;
+    inset: 76px 0 auto;
   }
 
   .nav.is-open {
