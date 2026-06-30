@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barber Brandon — Premium Cuts & Grooming</title>
+  <meta name="description" content="Barber Brandon in Yucca Valley, CA — classic cuts, fades, beard trims, and hot towel shaves. Book online or call 760-970-2250.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="header__inner">
+      <a href="#top" class="logo" aria-label="Barber Brandon home">
+        <img src="assets/logo.svg" alt="Barber Brandon" width="220" height="48">
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#info">Visit Us</a>
+        <a href="https://booksy.com/en-us/instant-experiences/widget/1385080?instant_experiences_enabled=true&amp;ig_ix=true&amp;staffer_id=1415484" class="nav__cta" target="_blank" rel="noopener noreferrer">Book Now</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Classic Barbershop · Modern Style</p>
+        <h1>Barber Brandon</h1>
+        <p class="hero__tagline">Precision cuts, clean fades, and sharp grooming — every time.</p>
+        <a href="https://booksy.com/en-us/instant-experiences/widget/1385080?instant_experiences_enabled=true&amp;ig_ix=true&amp;staffer_id=1415484" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Book a Haircut</a>
+      </div>
+      <div class="hero__pole" aria-hidden="true"></div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <h2>What We Do</h2>
+        <ul class="services__grid">
+          <li class="service-card">
+            <span class="service-card__icon" aria-hidden="true">✂</span>
+            <h3>Haircuts &amp; Fades</h3>
+            <p>From classic scissor cuts to skin fades and tapers, tailored to your look.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-card__icon" aria-hidden="true">🪒</span>
+            <h3>Beard &amp; Shave</h3>
+            <p>Beard shaping, line-ups, and hot towel straight-razor shaves.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-card__icon" aria-hidden="true">★</span>
+            <h3>Kids Cuts</h3>
+            <p>Patient, professional cuts for young clients in a relaxed setting.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="gallery__track">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80&auto=format&fit=crop" alt="Barber at work in a classic shop" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80&auto=format&fit=crop" alt="Barber tools and clippers on counter" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80&auto=format&fit=crop" alt="Client getting a fresh haircut" loading="lazy">
+      </div>
+    </section>
+
+    <section class="info" id="info">
+      <div class="container info__grid">
+        <div class="info-block">
+          <h3>Address</h3>
+          <address>
+            7354 Acoma Trail<br>
+            Yucca Valley, CA 92282
+          </address>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=7354+Acoma+Trail+Yucca+Valley+CA+92282" target="_blank" rel="noopener noreferrer" class="info-link">Get Directions</a>
+        </div>
+        <div class="info-block">
+          <h3>Contact</h3>
+          <p>
+            <a href="tel:+17609702250">760-970-2250</a>
+          </p>
+          <div class="social">
+            <a href="https://www.instagram.com/barberbrandon.xxv" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+          </div>
+        </div>
+        <div class="info-block">
+          <h3>Opening Hours</h3>
+          <dl class="hours">
+            <div><dt>Mon – Sat</dt><dd>10:00 am – 6:00 pm</dd></div>
+            <div><dt>Sunday</dt><dd>Closed</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="book" id="book">
+      <div class="container book__inner">
+        <h2>Ready for a Fresh Cut?</h2>
+        <p>Walk-ins welcome when available. For guaranteed time, book online.</p>
+        <a href="https://booksy.com/en-us/instant-experiences/widget/1385080?instant_experiences_enabled=true&amp;ig_ix=true&amp;staffer_id=1415484" class="btn btn--primary btn--large" target="_blank" rel="noopener noreferrer">Book a Haircut</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img src="assets/logo.svg" alt="" class="footer__logo" width="180" height="40" aria-hidden="true">
+      <p>&copy; <span id="year"></span> Barber Brandon. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
