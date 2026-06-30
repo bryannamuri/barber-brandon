@@ -285,25 +285,6 @@ a:hover {
   margin-bottom: 2.5rem;
 }
 
-.hero__pole {
-  position: absolute;
-  right: 0;
-  top: var(--header-h);
-  bottom: 0;
-  width: 28px;
-  background: repeating-linear-gradient(
-    180deg,
-    #b91c1c 0px,
-    #b91c1c 40px,
-    #f5f0e8 40px,
-    #f5f0e8 80px,
-    #1d4ed8 80px,
-    #1d4ed8 120px
-  );
-  opacity: 0.85;
-  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.4);
-}
-
 /* Buttons */
 .btn {
   display: inline-block;
@@ -989,10 +970,6 @@ a:hover {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
-  }
-
-  .hero__pole {
-    width: 16px;
   }
 
   .gallery__track {
