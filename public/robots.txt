@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://barber-brandon.vercel.app/sitemap.xml
+Sitemap: https://madrigal-signature.vercel.app/sitemap.xml
