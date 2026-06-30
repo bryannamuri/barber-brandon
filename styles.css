@@ -563,7 +563,7 @@ a:hover {
 
 .footer-dropdown {
   border-bottom: 1px solid rgba(201, 169, 98, 0.12);
-  padding: 0.65rem 0;
+  padding: 0.45rem 0;
 }
 
 .footer-dropdown__summary {
@@ -578,7 +578,7 @@ a:hover {
   cursor: pointer;
   list-style: none;
   position: relative;
-  padding: 0 1.25rem;
+  padding: 0 1rem 0 0;
   transition: opacity 0.2s, color 0.2s;
 }
 
@@ -609,29 +609,42 @@ a:hover {
 }
 
 .footer-dropdown__content {
-  margin-top: 1rem;
+  margin-top: 0.65rem;
+  max-height: 11rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201, 169, 98, 0.35) transparent;
+}
+
+.footer-dropdown__content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.footer-dropdown__content::-webkit-scrollbar-thumb {
+  background: rgba(201, 169, 98, 0.35);
+  border-radius: 4px;
 }
 
 .footer-areas__grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
 }
 
 .footer-areas__group h3 {
   font-family: var(--font-display);
-  font-size: 0.68rem;
+  font-size: 0.64rem;
   font-weight: 600;
   font-style: italic;
   letter-spacing: 0.04em;
   color: var(--gold-light);
   opacity: 0.85;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.15rem;
 }
 
 .footer-areas__group p {
-  font-size: 0.6rem;
-  line-height: 1.7;
+  font-size: 0.58rem;
+  line-height: 1.45;
   letter-spacing: 0.02em;
   color: var(--text-muted);
   opacity: 0.8;
@@ -641,64 +654,39 @@ a:hover {
 .footer-faq__list {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 0.45rem;
 }
 
-.footer-faq__item {
-  border-bottom: 1px solid rgba(201, 169, 98, 0.12);
-  padding: 0.65rem 0;
+.footer-faq__row {
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid rgba(201, 169, 98, 0.1);
 }
 
-.footer-faq__item summary {
+.footer-faq__row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.footer-faq__q {
   font-family: var(--font-display);
-  font-size: 0.72rem;
-  font-weight: 400;
+  font-size: 0.64rem;
+  font-weight: 600;
   font-style: italic;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--text-muted);
-  cursor: pointer;
-  list-style: none;
-  padding-right: 1.25rem;
-  position: relative;
-}
-
-.footer-faq__item summary::-webkit-details-marker {
-  display: none;
-}
-
-.footer-faq__item summary::after {
-  content: "+";
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-  font-style: normal;
-  color: var(--gold);
-  opacity: 0.5;
-}
-
-.footer-faq__item[open] summary::after {
-  content: "−";
-}
-
-.footer-faq__item summary:hover {
   color: var(--gold-light);
+  opacity: 0.9;
+  margin-bottom: 0.15rem;
 }
 
-.footer-faq__item p {
-  margin-top: 0.55rem;
-  font-size: 0.62rem;
-  line-height: 1.65;
+.footer-faq__a {
+  font-size: 0.58rem;
+  line-height: 1.45;
   letter-spacing: 0.015em;
   color: var(--text-muted);
   opacity: 0.85;
 }
 
-.footer-faq__item a {
+.footer-faq__a a {
   color: var(--gold-light);
-  opacity: 0.9;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -929,6 +917,14 @@ a:hover {
   text-align: center;
 }
 
+.footer__content {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .footer__logo {
   opacity: 1;
   height: 200px;
@@ -940,6 +936,70 @@ a:hover {
 .footer__copy {
   font-size: 0.8rem;
   color: var(--text-muted);
+}
+
+@media (min-width: 769px) {
+  .footer {
+    padding: 2rem 0 1.75rem;
+  }
+
+  .footer__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+    text-align: left;
+  }
+
+  .footer__logo {
+    height: 130px;
+    flex-shrink: 0;
+    align-self: center;
+  }
+
+  .footer__content {
+    flex: 1;
+    max-width: none;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2rem;
+    align-items: start;
+  }
+
+  .footer-areas,
+  .footer-faq {
+    max-width: none;
+    padding: 0;
+  }
+
+  .footer-areas {
+    grid-column: 1;
+  }
+
+  .footer-faq {
+    grid-column: 2;
+    margin-top: 0;
+  }
+
+  .footer__copy {
+    grid-column: 1 / -1;
+    margin-top: 0.5rem;
+    text-align: left;
+  }
+
+  .footer-areas__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem 1rem;
+  }
+
+  .footer-dropdown__content {
+    max-height: 9rem;
+  }
+
+  .footer-dropdown__summary {
+    text-align: left;
+    padding-left: 0;
+  }
 }
 
 /* Mobile nav */
